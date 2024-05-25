@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --bg: url(../img/bg-mobile.jpg);
+  --text-color: white;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover:rgba(255, 255, 255, 0.05);
+  --high-light-color: rgba(255, 255, 255, 0.05);
+  --switch-button: url(../img/MoonStars.svg) no-repeat center;
+}
+
+.light{
+  --bg: url(../img/bg-mobile-light.jpg);
+  --text-color: black;
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover:rgba(0, 0, 0, 0.2);
+  --high-light-color:rgba(0, 0, 0, 0.1);
+  --switch-button: url(../img/Sun.svg) no-repeat center;
+}
+
+body{
+  /* MANEIRA 1
+  background: url(../img/bg-mobile.jpg); -> URL é Função
+  background-repeat: no-repeat;
+  background-position: top center; -> TOP(eixo Y - vertical) CENTER(eixo X - hotizontal)
+  background-size: cover; */
+
+  /*MANEIRA 2*/
+  background: var(--bg) no-repeat top center/cover;
+}
+
+body *{
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
+/*Perfil*/
+
+#container{
+  width: 360px;
+  height: 712px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+#profile{
+  text-align: center;
+  padding: 24px;
+  margin: 56px auto 0px auto;
+}
+
+#profile img{
+  width: 112px; /*geralmente a altura não é definida no CSS*/
+  /*margin: auto; <- em elementos inline, a margin auto não funciona, como link, imagem... somente o pai do elemento pode ser text-align:center
+  display: block; <- temos que transformar o elemento em blovk para que funcione (o block ocupa toda a largura disponível)*/
+}
+
+#profile p{
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+/*Botão switch*/
+#switch{
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-button);
+  border-radius: 50%;
+  border: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%); /*Para posicionar um position ao meio, deve ser usado transform:translateY(-50%) + onde posicionar: 50%. Neste caso, usou-se o Top.*/
+}
+
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+  border-radius: 99px;
+}
+
+.light #switch button{
+  right: 0;
+  left: initial;
+}
+
+/*Links*/
+
+ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a{
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  background: var(--surface-color);
+  padding: 16px;
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  text-decoration: none;
+  backdrop-filter: blur(4px); /*Deixa o fundo embaçado*/
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+ul li a:hover{
+  border: 1.5px solid var(--text-color);
+  background: var(--surface-color-hover);
+}
+
+#social-links{
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
+  gap: 10px;
+  justify-content: center;
+  transition: background 8.5s;
+}
+
+#social-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 50%;
+}
+
+#social-links a:hover{
+  background: var(--high-light-color);
+}
+
+footer{
+  text-align: center;
+  padding: 24px 0;
+  font-size: 14px;
+}
+
