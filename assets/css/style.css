@@ -35,6 +35,7 @@ body{
 
   /*MANEIRA 2*/
   background: var(--bg) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body *{
@@ -87,6 +88,11 @@ body *{
   z-index: 1;
   top: 50%;
   transform: translateY(-50%); /*Para posicionar um position ao meio, deve ser usado transform:translateY(-50%) + onde posicionar: 50%. Neste caso, usou-se o Top.*/
+  animation: slide-back 0.4s forwards;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--high-light-color);
 }
 
 #switch span{
@@ -100,8 +106,7 @@ body *{
 }
 
 .light #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-in 0.4s forwards;
 }
 
 /*Links*/
@@ -161,3 +166,40 @@ footer{
   font-size: 14px;
 }
 
+/*Media queries*/
+
+@media (min-width: 700px){
+  :root{
+    --bg: url(../img/bg-desktop.jpg);
+  }
+
+  .light{
+    --bg: url(../img/bg-desktop-light.jpg);
+  }
+
+  body{
+    background: var(--bg);
+  }
+}
+
+/*Animações*/
+
+@keyframes slide-in{
+  from {
+    left: 0;
+  }
+
+  to  {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back{
+  from {
+    left: 50%;
+  }
+
+  to  {
+    left: 0;
+  }
+}
