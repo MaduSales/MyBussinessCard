@@ -1,14 +1,17 @@
-# Cartão de Visitas
+# Cartão de Visitas 🃏
 
 Projeto Cartão de Visitas criado durante o desafio Discover do Rocketseat, do qual realizei enquanto conhecia a plataforma em umperíodo limitado.
-<br>
-<hr>
 
 ## Tecnologias Usadas:
 - HTML;
 - CSS;
 - JavaScript;
 <br>
+<hr>
+
+## Acesso:
+Para conhecer o projeto, [clique aqui]()
+
 <br>
 <hr>
 
