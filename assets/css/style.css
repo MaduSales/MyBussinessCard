@@ -41,7 +41,7 @@ body{
   background-position: top center; -> TOP(eixo Y - vertical) CENTER(eixo X - hotizontal)
   background-size: cover; */
 
-  /*MANEIRA 2*/
+  /*MANEIRA 2 */
   background: var(--bg) no-repeat top center/cover;
   height: 100vh;
 }
