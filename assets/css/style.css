@@ -15,6 +15,7 @@
   --surface-color-hover:rgba(255, 255, 255, 0.05);
   --high-light-color: rgba(255, 255, 255, 0.05);
   --switch-button: url(../img/MoonStars.svg) no-repeat center;
+  --boxshadow: 0px 0px 8px 0px white;
 }
 
 .light{
@@ -25,6 +26,12 @@
   --surface-color-hover:rgba(0, 0, 0, 0.2);
   --high-light-color:rgba(0, 0, 0, 0.1);
   --switch-button: url(../img/Sun.svg) no-repeat center;
+  --boxshadow: 0px 0px 8px 0px black;
+}
+
+body *{
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
 }
 
 body{
@@ -37,11 +44,6 @@ body{
   /*MANEIRA 2*/
   background: var(--bg) no-repeat top center/cover;
   height: 100vh;
-}
-
-body *{
-  font-family: "Inter", sans-serif;
-  color: var(--text-color);
 }
 
 /*Perfil*/
@@ -61,6 +63,8 @@ body *{
 
 #profile img{
   width: 112px; /*geralmente a altura não é definida no CSS*/
+  box-shadow: var(--boxshadow);
+  border-radius: 50%;
   /*margin: auto; <- em elementos inline, a margin auto não funciona, como link, imagem... somente o pai do elemento pode ser text-align:center
   display: block; <- temos que transformar o elemento em blovk para que funcione (o block ocupa toda a largura disponível)*/
 }
