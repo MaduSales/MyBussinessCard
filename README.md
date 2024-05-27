@@ -2,7 +2,8 @@
 
 Projeto Cartão de Visitas criado durante o desafio Discover do Rocketseat, do qual realizei enquanto conhecia a plataforma em umperíodo limitado.
 
-![image](https://github.com/MaduSales/MyBussinessCard/assets/166547195/8abce9da-de80-4e47-95b2-e5893a337ab9)
+![image](https://github.com/MaduSales/MyBussinessCard/assets/166547195/30e687f3-5be4-4ceb-8cd4-015d91f14066)
+
 
 
 ## Tecnologias Usadas:
