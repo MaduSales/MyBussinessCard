@@ -9,7 +9,6 @@ Projeto Cartão de Visitas criado durante o desafio Discover do Rocketseat, do q
 ## Tecnologias Usadas:
 - HTML;
 - CSS;
-- JavaScript;
 <br>
 
 
